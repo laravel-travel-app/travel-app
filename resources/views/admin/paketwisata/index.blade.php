@@ -1,4 +1,4 @@
-@extends('layouts.mobil')
+@extends('layouts.paket-wisata')
 @section('content')
 <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -6,14 +6,14 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Data Mobil</h1>
-            <a class="btn btn-primary" href="{{ url('admin/tambah-mobil') }}">Tambah Mobil</a>
+            <h1 class="m-0">Data Paket Wisata</h1>
+            <a class="btn btn-primary" href="{{ url('admin/create-paket') }}">Tambah Paket Wisata</a>
           </div><!-- /.col -->
           
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Data Mobil</li>
+              <li class="breadcrumb-item"><a href="{{ url('admin/dashboard') }}">Home</a></li>
+              <li class="breadcrumb-item active">Data Paket Wisata</li>
               
             </ol>
           </div><!-- /.col -->
@@ -30,7 +30,7 @@
           <div class="col-12">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Data Mobil</h3>
+                <h3 class="card-title">Data Paket Wisata</h3>
           
                 <div class="card-tools">
                   <div class="input-group input-group-sm" style="width: 150px;">
@@ -50,34 +50,26 @@
                   <thead>
                     <tr>
                       <th>Foto</th>
-                      <th>Nama Mobil</th>
+                      <th>Nama Paket Wisata</th>
                       <th>Harga</th>
-                      <th>Transmisi</th>
-                      <th>Bahan Bakar</th>
-                      <th>Warna</th>
-                      <th>Kapasitas</th>
-                      <th>Driver</th>
-                      <th>BBM</th>
+                      <th>Include</th>
                       <th>Aksi</th>
                     </tr>
                   </thead>
-                  @foreach($car as $c)
+                  @foreach($package as $row)
                   <tbody>
                     <tr>
-                      <td>{{ $c->image }}</td>
-                      <td>{{ $c->name }}</td>
-                      <td>{{ $c->price }}</td>
-                      <td>{{ $c->transmission }}</td>
-                      <td>{{ $c->fuel }}</td>
-                      <td>{{ $c->color }}</td>
-                      <td>{{ $c->capacity }}</td>
-                      <td>{{ $c->driver == 1 ? 'Ya' : 'Tidak' }}</td>
-                      <td>{{ $c->bbm == 1 ? 'Ya' : 'Tidak' }}</td>
-                      <th class="text-center">
-                        <a href="{{ url('admin/edit-mobil', $c->id) }}">
+                      <td><img src="{{ asset('img/'.$row->image) }}" style="height: 50px;width:100px;"></td>
+                      <td>{{ $row->package_name }}</td>
+                      <td>{{ $row->price }}</td>
+                      <td>{{ $row->desc }}
+                        
+                      </td>
+                      <th>
+                        <a href="{{ url('admin/edit', $row->id) }}">
                           Edit |
                       </a>
-                      <a href="{{ url('admin/hapus', $c->id) }}">
+                      <a href="{{ url('admin/hapus', $row->id) }}">
                           Hapus
                       </a>
                   </th>

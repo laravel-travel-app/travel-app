@@ -90,7 +90,13 @@ class CarController extends Controller
 
         $car->save();
         return redirect('admin/data-mobil')->with('message', 'Data Berhasil Diupdate');
+    }
 
+    public function delete($id)
+    {
+        $car = Car::find($id);
+        $car->delete();
 
+        return redirect('admin/data-mobil')-with('message', 'Data Berhasil Dihapus');
     }
 }
