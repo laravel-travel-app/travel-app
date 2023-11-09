@@ -1,5 +1,5 @@
-<footer class="relative bottom-0 left-0 w-full bg-gradient-to-r from-clr-primary-900 to-clr-secondary-700">
-    <section class="flex items-center justify-between flex-col lg:flex-row px-20 text-sm">
+<footer class="w-full static bottom-0 left-0 bg-gradient-to-r from-clr-primary-900 to-clr-secondary-700">
+    <section class="flex items-center justify-between flex-col lg:flex-row px-20 text-sm p-5">
         <div class="flex items-center space-x-5 flex-col lg:flex-row">
             <div class="flex items-center">
                 <img src="{{ asset('image/Profile.png') }}" class="w-28 h-28" alt="M-ONE TRAVELLA">
@@ -9,6 +9,8 @@
                 <a class="text-gray-200 hover:text-clr-secondary-500 transition-colors" href="#">Tentang kami</a>
                 <a class="text-gray-200 hover:text-clr-secondary-500 pl-3 transition-colors" href="#">Ketentuan
                     dan Pemesanan</a>
+                <a class="text-gray-200 hover:text-clr-secondary-500 pl-3 transition-colors" href="#">Visi dan
+                    Misi</a>
             </nav>
         </div>
         <ul class="flex items-center gap-3">
