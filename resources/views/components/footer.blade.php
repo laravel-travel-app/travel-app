@@ -9,7 +9,8 @@
                 <a class="text-gray-200 hover:text-clr-secondary-500 transition-colors" href="#">Tentang kami</a>
                 <a class="text-gray-200 hover:text-clr-secondary-500 pl-3 transition-colors" href="#">Ketentuan
                     dan Pemesanan</a>
-                <a class="text-gray-200 hover:text-clr-secondary-500 pl-3 transition-colors" href="#">Visi dan
+                <a class="text-gray-200 hover:text-clr-secondary-500 pl-3 transition-colors"
+                    href="kontak#vision_mission">Visi dan
                     Misi</a>
             </nav>
         </div>
