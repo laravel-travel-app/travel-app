@@ -14,7 +14,7 @@
 
 <body class="font-font-primary block">
     <div class="fixed right-5 bottom-10 bg-green-500  rounded-lg z-50">
-        <div class="py-3 px-6 text-clr-smooth-white leading-tight">
+        <div class="py-2 px-5 text-clr-smooth-white leading-tight">
             <a class="flex items-center space-x-2" href="https://wa.link/4ti0bp">
                 <i class="uil-whatsapp text-xl"></i>
                 <h2>Pesan Sekarang</h2>

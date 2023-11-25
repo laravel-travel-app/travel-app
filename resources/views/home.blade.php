@@ -1,5 +1,6 @@
 <x-app-layout title="M-ONE Travella">
-    <header class="flex min-h-screen w-full justify-center flex-col lg:flex-row space-x-0 md:space-x-10 items-center">
+    <header class="flex h-1/2 py-48 w-full justify-center flex-col lg:flex-row space-x-0 md:space-x-10 items-center">
+
         <section class="grid place-items-center lg:place-items-start">
             <img class="object-fill drop-shadow-lg w-1/2 md:w-full" src="{{ asset('image/hero.png') }}"
                 alt="Latar belakang">
@@ -24,7 +25,7 @@
             </div>
         </section>
     </header>
-    <section id="paket-wisata" class="min-h-screen flex justify-center flex-col bg-white pb-5">
+    <section id="paket-wisata" class="h-1/2  flex justify-center flex-col bg-white pb-5">
         <div class="py-24">
             <h1 class="text-center text-xl md:text-2xl text-clr-smooth-black font-bold pt-2">Mau jalan-jalan kemana?
             </h1>
@@ -91,7 +92,7 @@
             </div>
         </section>
     </section>
-    <section class="min-h-screen flex justify-center flex-col bg-white">
+    <section class="h-1/2 py-48 flex justify-center flex-col bg-white">
         <div class="py-24">
             <h1 class="text-center text-xl md:text-2xl text-clr-smooth-black font-bold pt-2">Destinasi wisata pilihan
             </h1>
@@ -177,8 +178,7 @@
             </div>
         </section>
     </section>
-    <section id="paket-wisata"
-        class="min-h-screen container mx-auto flex flex-col lg:flex-row items-center gap-20 pb-5">
+    <section id="paket-wisata" class="h-1/2 py-24 container mx-auto flex flex-col lg:flex-row items-center gap-20">
         <section class="w-full lg:w-1/2 flex items-center justify-center">
             <img src="{{ asset('image/Profile.png') }}" class="w-96" alt="Logo M-One Travella">
         </section>

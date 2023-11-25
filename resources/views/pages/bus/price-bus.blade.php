@@ -1,133 +1,76 @@
-<x-app-layout title="Daftar Harga Bus Pariwisata | M-One Travella">
+<x-app-layout title="Daftar Harga Sewa Bus Pariwisata | M-One Travella">
     <section class="min-h-screen">
-        <section class="container mx-auto mt-16">
-            <div class="grid grid-cols-1 sm:grid-col-2 md:grid-cols-2 lg:grid-cols-2 gap-4 w-full h-fit p-5">
-                <div>
-                    <img src="https://omnispace.blob.core.windows.net/strapi-prod/2022-09-19/TRAC_Big_Bus_Luxury_Mercy_b700e329cb.png"
-                        class="object-contain border-2 rounded-md w-full h-full" alt="Example bus" />
+        <header class=" h-auto text-center py-24 mb-10  w-full flex flex-col lg:flex-row items-center justify-evenly">
+            <div class="flex flex-col mb-10 w-1/2 md:w-full lg:w-1/3">
+                <h1 class="text-2xl md:text-3xl font-bold mb-5
+                text-clr-smooth-black">Nikmati Perjalanan
+                    anda dengan Bus Pariwisata
+                </h1>
+                <p>Kendaraan Terbaik untuk Semua Kebutuhan Anda</p>
+            </div>
+            <div class=" flex justify-center items-center max-w-md">
+                <img src="{{ asset('image/bus/Bus-Hero.png') }}" class="w-96 object-cover" alt="">
+            </div>
+        </header>
+        <section class="flex flex-col py-5 mb-10">
+            <div class="mb-10">
+                <h1 class="text-2xl md:text-4xl font-bold text-clr-smooth-black text-center title-bus">Berikut Harga
+                    Sewa Bus Pariwisata
+                </h1>
+            </div>
+            <div class="container mx-auto ">
+                <div class="container mx-auto px-4 md:px-12 ">
+
+
+                    <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                        <table class="w-full text-sm text-left rtl:text-right text-gray-500">
+                            <thead class="text-xs text-clr-smooth-white uppercase">
+                                <tr>
+                                    <th scope="col" class="px-6 py-3 bg-clr-primary-500 dark:bg-gray-800">
+                                        Jenis Kendaaran
+                                    </th>
+                                    <th scope="col" class="px-6  bg-clr-primary-500 py-3">
+                                        Kapasitas
+                                    </th>
+                                    <th scope="col" class="px-6 py-3  bg-clr-primary-500 dark:bg-gray-800">
+                                        Harga sewa perhari
+                                    </th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-gray-200 dark:border-gray-700">
+                                    <th scope="row"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
+                                        TOYOTA HIACE
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        14
+                                    </td>
+                                    <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
+                                        1.600.000
+                                    </td>
+
+                                </tr>
+                                <tr class="border-b border-gray-200 dark:border-gray-700">
+                                    <th scope="row"
+                                        class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap bg-gray-50 dark:text-white dark:bg-gray-800">
+                                        ELF LONG
+                                    </th>
+                                    <td class="px-6 py-4">
+                                        31-25
+                                    </td>
+                                    <td class="px-6 py-4 bg-gray-50 dark:bg-gray-800">
+                                        1.700.000
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
                 </div>
-                <article class="flex flex-col justify-between">
-                    <div>
-                        <h1 class="text-3xl font-bold mb-5">Hiace Luxury Bus</h1>
-                        <h3 class="font-semibold mb-5">Spesifikasi :</h3>
-                    </div>
-
-                    <div class="flex items-center justify-between mb-5">
-                        <ul>
-                            <li class="flex w-full flex-row gap-2 items-center text-xs mb-5">
-                                <div class="border border-gray-300 rounded-md p-1">
-                                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="48"
-                                        height="48" viewBox="0 0 48 48">
-                                        <g fill="none" stroke="currentColor" stroke-width="4">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M36 26V14a2 2 0 0 0-2-2H10a2 2 0 0 0-2 2v24a2 2 0 0 0 2 2h17M16 12v28m12-28v17m0-17V6a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v6" />
-                                            <path d="M35 44a9 9 0 1 0 0-18a9 9 0 0 0 0 18Z" />
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M34 32v4h4" />
-                                            <path stroke-linecap="round" d="M13 40v4" />
-                                        </g>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p>Bagasi</p>
-                                    <span>32</span>
-                                </div>
-                            </li>
-                            <li class="text-sm">
-                            <li class="flex w-full flex-row gap-2 items-center text-xs">
-                                <div class="border border-gray-300 rounded-md p-1">
-                                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="16"
-                                        height="16" viewBox="0 0 16 16">
-                                        <path fill="currentColor"
-                                            d="M1 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1 2 2v.5a.5.5 0 0 0 1 0V8h-.5a.5.5 0 0 1-.5-.5V4.375a.5.5 0 0 1 .5-.5h1.495c-.011-.476-.053-.894-.201-1.222a.97.97 0 0 0-.394-.458c-.184-.11-.464-.195-.9-.195a.5.5 0 0 1 0-1c.564 0 1.034.11 1.412.336c.383.228.634.551.794.907c.295.655.294 1.465.294 2.081V7.5a.5.5 0 0 1-.5.5H15v4.5a1.5 1.5 0 0 1-3 0V12a1 1 0 0 0-1-1v4h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V2Zm2.5 0a.5.5 0 0 0-.5.5v5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5h-5Z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p>Bahan Bakar</p>
-                                    <span>Diesel</span>
-                                </div>
-                            </li>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li class="flex w-full flex-row gap-2 items-center text-xs mb-5">
-                                <div class="border border-gray-300 rounded-md p-1">
-                                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="48"
-                                        height="48" viewBox="0 0 48 48">
-                                        <g fill="none" stroke="currentColor" stroke-width="4">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M36 26V14a2 2 0 0 0-2-2H10a2 2 0 0 0-2 2v24a2 2 0 0 0 2 2h17M16 12v28m12-28v17m0-17V6a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v6" />
-                                            <path d="M35 44a9 9 0 1 0 0-18a9 9 0 0 0 0 18Z" />
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M34 32v4h4" />
-                                            <path stroke-linecap="round" d="M13 40v4" />
-                                        </g>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p>Bagasi</p>
-                                    <span>32</span>
-                                </div>
-                            </li>
-                            <li class="text-sm">
-                            <li class="flex w-full flex-row gap-2 items-center text-xs">
-                                <div class="border border-gray-300 rounded-md p-1">
-                                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="16"
-                                        height="16" viewBox="0 0 16 16">
-                                        <path fill="currentColor"
-                                            d="M1 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1 2 2v.5a.5.5 0 0 0 1 0V8h-.5a.5.5 0 0 1-.5-.5V4.375a.5.5 0 0 1 .5-.5h1.495c-.011-.476-.053-.894-.201-1.222a.97.97 0 0 0-.394-.458c-.184-.11-.464-.195-.9-.195a.5.5 0 0 1 0-1c.564 0 1.034.11 1.412.336c.383.228.634.551.794.907c.295.655.294 1.465.294 2.081V7.5a.5.5 0 0 1-.5.5H15v4.5a1.5 1.5 0 0 1-3 0V12a1 1 0 0 0-1-1v4h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V2Zm2.5 0a.5.5 0 0 0-.5.5v5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5h-5Z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p>Bahan Bakar</p>
-                                    <span>Diesel</span>
-                                </div>
-                            </li>
-                            </li>
-                        </ul>
-                        <ul>
-                            <li class="flex w-full flex-row gap-2 items-center text-xs mb-5">
-                                <div class="border border-gray-300 rounded-md p-1">
-                                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="48"
-                                        height="48" viewBox="0 0 48 48">
-                                        <g fill="none" stroke="currentColor" stroke-width="4">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M36 26V14a2 2 0 0 0-2-2H10a2 2 0 0 0-2 2v24a2 2 0 0 0 2 2h17M16 12v28m12-28v17m0-17V6a2 2 0 0 0-2-2h-8a2 2 0 0 0-2 2v6" />
-                                            <path d="M35 44a9 9 0 1 0 0-18a9 9 0 0 0 0 18Z" />
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M34 32v4h4" />
-                                            <path stroke-linecap="round" d="M13 40v4" />
-                                        </g>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p>Bagasi</p>
-                                    <span>32</span>
-                                </div>
-                            </li>
-                            <li class="text-sm">
-                            <li class="flex w-full flex-row gap-2 items-center text-xs">
-                                <div class="border border-gray-300 rounded-md p-1">
-                                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" width="16"
-                                        height="16" viewBox="0 0 16 16">
-                                        <path fill="currentColor"
-                                            d="M1 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1 2 2v.5a.5.5 0 0 0 1 0V8h-.5a.5.5 0 0 1-.5-.5V4.375a.5.5 0 0 1 .5-.5h1.495c-.011-.476-.053-.894-.201-1.222a.97.97 0 0 0-.394-.458c-.184-.11-.464-.195-.9-.195a.5.5 0 0 1 0-1c.564 0 1.034.11 1.412.336c.383.228.634.551.794.907c.295.655.294 1.465.294 2.081V7.5a.5.5 0 0 1-.5.5H15v4.5a1.5 1.5 0 0 1-3 0V12a1 1 0 0 0-1-1v4h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V2Zm2.5 0a.5.5 0 0 0-.5.5v5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5h-5Z" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p>Bahan Bakar</p>
-                                    <span>Diesel</span>
-                                </div>
-                            </li>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h2 class="font-semibold mb-5">Tertarik dengan Unit ini?</h2>
-                        <button
-                            class="bg-clr-secondary-500 hover:bg-clr-secondary-700 text-white px-4 py-2 w-full rounded-md">Hubungi
-                            Kami</button>
-                    </div>
-                </article>
             </div>
-            </div>
-
         </section>
+    </section>
+
 </x-app-layout>

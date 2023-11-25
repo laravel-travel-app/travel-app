@@ -99,3 +99,69 @@ body {
     background-color: #f7f7fe;
     background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%234585c6' fill-opacity='0.4' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
 }
+.one::before {
+    content: "1";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    display: grid;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+
+    background: #4585c6;
+    color: #f7f7fe;
+    border-radius: 100%;
+}
+.two::before {
+    content: "2";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    display: grid;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+    background: #4585c6;
+    color: #f7f7fe;
+    border-radius: 100%;
+}
+.three::before {
+    content: "3";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    display: grid;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+    background: #4585c6;
+    color: #f7f7fe;
+    border-radius: 100%;
+}
+.four::before {
+    content: "4";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    display: grid;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+    background: #4585c6;
+    color: #f7f7fe;
+    border-radius: 100%;
+}
+.five::before {
+    content: "5";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    display: grid;
+    place-items: center;
+    width: 35px;
+    height: 35px;
+    background: #4585c6;
+    color: #f7f7fe;
+    border-radius: 100%;
+}

@@ -1,5 +1,5 @@
 <x-app-layout title="Kontak Kami | M-One Travella">
-    <section class="min-h-screen w-full bg-white">
+    <section class=" h-1/2 w-full bg-white">
         <div class="">
             <article class="flex flex-col top-12 lg:top-32">
                 <div class="absolute">
@@ -93,7 +93,47 @@
             </article>
         </div>
     </section>
-    <section id="vision_mission" class="min-h-screen">
+    <section id="our_process" class="bg-white h-1/2">
+        <div>
+            <h2 class="font-semibold text-slate-200 text-3xl text-center mb-10 py-10 uppercase">Our Process</h2>
+        </div>
+        <div class="container mx-auto flex flex-col items-center">
+            <div class="p-5">
+                <div class="flex justify-center flex-col space-y-5 items-center">
+                    <div
+                        class="grid grid-cols-1 md:grid-cols-2 items-center lg:grid-cols-3 place-items-center gap-5 space-x-0 space-y-0 md:space-y-0 lg:space-x-3 lg:space-y-0"">
+                        <div class="flex flex-col space-y-3">
+                            <img src="{{ asset('image/komunitas.jpg') }}"
+                                class="w-full rounded-lg object-cover cursor-pointer" alt="Komunitas">
+                            <h4 class="text-2xl">Komunitas</h4>
+                            <p class="text-sm w-full">Berawal dari sebuah komunitas yang membuat saya
+                                tergerak
+                                untuk membangun
+                                usaha. Sehingga
+                                saya bisa membantu orang2 sekitar yang membutuhkan lapangan pekerjaan</p>
+                        </div>
+
+                        <div class="flex flex-col space-y-3">
+                            <img src="{{ asset('image/family.jpg') }}"
+                                class="w-full rounded-lg object-cover cursor-pointer" alt="Komunitas">
+                            <h4 class="text-2xl">Family</h4>
+                            <p class="text-sm w-full">Selain komunitas Keluarga menjadi peran penting sehingga saya
+                                terdorong untuk membuat usaha dengan tujuan mendapatkan profit yang bermanfaat buat
+                                semua</p>
+                        </div>
+                        <div class="flex flex-col space-y-3 ">
+                            <img src="{{ asset('image/kajian.jpg') }}"
+                                class="w-full rounded-lg object-cover cursor-pointer" alt="Komunitas">
+                            <h4 class="text-2xl">Kajian Alquran & Asunah</h4>
+                            <p class="text-sm w-full">Dalam islam untuk menjadi kaya itu adalah sebuah keharusan
+                                sehingga bisa membantu orang-orang yang sangat membutuhkan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="vision_mission" class=" h-1/2">
         <div class="bg-textured">
             <h2 class="text-center text-gray-600 p-16 text-3xl font-semibold">Visi dan misi</h2>
         </div>
@@ -114,19 +154,16 @@
             <div class="p-10">
                 <h3 class="text-clr-primary-600 text-xl">Visi</h3>
                 <ul class="flex flex-col space-y-5 list-disc p-4">
-                    <li>Mendatangkan wisatawan baik domestik maupun luar negeri dengan melalui pe nawaran produk-produk
-                        paket wisata</li>
-                    <li>Menjual Paket Tour yang berkonsep
-                        Selalu ada tawa di setiap perialanannya</li>
-                    <li>Menjadikan Team Aktip,produkip dan
-                        Inonvatif</li>
-                    <li>Menjadikan Perusahaan bermanfaat bagi
-                        Semua orang</li>
+                    <li>Mengenalkan Potensi wisata di indonesia Khusus nya dipulau jawa</li>
+                    <li>Ikut Membanggakan potensi-potensi pariwisata di indonesia</li>
+                    <li>Menjadi Travel wisata No. 1 di Bandung</li>
+                    <li>Menjadi Biro perjalanan wisata <i>domestic</i> yang mampu melayani kebutuhan setiap orang untuk
+                        bisa menikmati keindahan Pariwisata Indonesia</li>
                 </ul>
             </div>
         </div>
     </section>
-    <section class="min-h-screen bg-white py-10">
+    <section class="h-1/2 bg-white py-10">
         <div class="container mx-auto p-6 border border-gray-200 rounded-md">
             <h1 class="text-2xl text-clr-smooth-black mb-3">Kirim Pesan Anda</h1>
             <form class="">

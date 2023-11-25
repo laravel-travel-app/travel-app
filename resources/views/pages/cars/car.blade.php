@@ -1,6 +1,6 @@
 <x-app-layout title="Sewa Mobil | M-One Travella">
     <section class="min-h-screen">
-        <header class=" h-auto text-center py-24 mb-10  w-full flex flex-col lg:flex-row items-center justify-evenly">
+        <header class=" text-center py-24 mb-10  w-full flex flex-col lg:flex-row items-center justify-evenly">
             <div class="flex flex-col mb-10 w-1/2 md:w-full lg:w-1/3">
                 <h1 class="text-2xl md:text-3xl font-bold mb-5
                 text-clr-smooth-black">Lengkapi Perjalanan

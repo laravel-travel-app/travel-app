@@ -26,6 +26,12 @@
                     </a>
                 </li>
                 <li>
+                    <a href="{{ route('car.index') }}"
+                        class="text-base pl-3 block text-gray-600 hover:text-clr-primary-500 transition-colors">
+                        Sewa Villa
+                    </a>
+                </li>
+                <li>
                     <div class="bus-dropdown" id="bus-dropdown">
                         <button id="bus-dropdown-button"
                             class="text-base pl-0 lg:pl-3 block text-gray-600 hover:text-clr-primary-500 transition-colors">
