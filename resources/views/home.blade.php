@@ -39,7 +39,7 @@
                     <div class="my-1 px-1 w-72 md:w-72 lg:my-4 lg:px-4 lg:w-72">
                         <!-- Article -->
                         <article class="overflow-hidden rounded-lg">
-                            <a href="#">
+                            <a href="{{ route('tour.bandung.detail') }}">
                                 <img alt="Placeholder" class="block h-auto w-72"
                                     src="{{ asset('image/pw-bandung.jpeg') }}">
                             </a>
