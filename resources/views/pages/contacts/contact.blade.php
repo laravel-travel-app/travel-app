@@ -1,6 +1,6 @@
 <x-app-layout title="Kontak Kami | M-One Travella">
-    <section class=" h-1/2 w-full bg-white">
-        <div class="">
+    <section id="about" class=" h-1/2 w-full bg-white">
+        <div>
             <article class="flex flex-col top-12 lg:top-32">
                 <div class="absolute">
                     <svg width="288" height="276" viewBox="0 0 288 276" fill="none"
