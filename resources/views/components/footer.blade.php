@@ -6,7 +6,8 @@
                 <a class="text-gray-400" href="#">PT. EMONE GROUP INDONESIA</a>
             </div>
             <nav class="flex items-center space-x-4 divide-x-0 lg:divide-x-2 lg:flex-row mb-5 lg:mb-0">
-                <a class="text-gray-200 hover:text-clr-secondary-500 transition-colors" href="#">Tentang kami</a>
+                <a class="text-gray-200 hover:text-clr-secondary-500 transition-colors" href="kontak#about">Tentang
+                    kami</a>
                 <a class="text-gray-200 hover:text-clr-secondary-500 pl-3 transition-colors"
                     href="{{ route('order.index') }}">Cara
                     Pesan</a>

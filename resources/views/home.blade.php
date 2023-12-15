@@ -33,61 +33,31 @@
         </div>
         <section class="container mx-auto">
             <div class="container  mx-auto px-4 md:px-12 ">
-                <div class="sm:flex justify-center grid place-items-center flex-wrap mb-5 -mx-1 lg:-mx-4">
-
+                <div class="sm:flex justify-center gap-5 grid place-items-center flex-wrap mb-5 -mx-1 lg:-mx-4">
+                    {{-- Looping disini --}}
                     <!-- Column -->
                     <div class="my-1 px-1 w-72 md:w-72 lg:my-4 lg:px-4 lg:w-72">
-                        <!-- Article -->
-                        <article class="overflow-hidden rounded-lg">
-                            <a href="{{ route('tour.bandung.detail') }}">
-                                <img alt="Placeholder" class="block h-auto w-72"
-                                    src="{{ asset('image/pw-bandung.jpeg') }}">
-                            </a>
-
-                        </article>
-                        <!-- END Article -->
+                        <div class="relative left-0 top-0 w-72 rounded-2xl overflow-hidden">
+                            <img src="https://elshinta.com/asset/upload/article/2023/september/8628_ELSHINTADOTCOM_20230925_gesat-2.jpg"
+                                alt="Bandung" class="h-[350px] rounded-xl object-cover" />
+                            <div
+                                class="absolute bottom-0 left-0 py-5 px-5 bg-gradient-to-t from-slate-700 to-transparent w-full">
+                                <h2 class="text-xl text-white font-bold mb-2">Paket wisata Bandung</h2>
+                                <a href="{{ route('tour.bandung.detail') }}"
+                                    class="bg-[#d5633c] transform-translate-button flex w-32 items-center justify-between rounded-md text-white text-sm py-2 px-3">
+                                    Lihat paket
+                                    <span class="transform-translate-button-icon"><svg class="w-4 h-4"
+                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                        </svg>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                     <!-- END Column -->
-                    <!-- Column -->
-                    <div class="my-1 px-1 w-72 md:w-72 lg:my-4 lg:px-4 lg:w-72">
-                        <!-- Article -->
-                        <article class="overflow-hidden rounded-lg shadow-lg">
-                            <a href="#">
-                                <img alt="Placeholder" class="block h-auto w-72"
-                                    src="{{ asset('image/pw-jogja.jpeg') }}">
-                            </a>
-
-                        </article>
-                        <!-- END Article -->
-                    </div>
-                    <!-- END Column -->
-                    <!-- Column -->
-                    <div class="my-1 px-1 w-72 md:w-72 lg:my-4 lg:px-4 lg:w-72">
-                        <!-- Article -->
-                        <article class="overflow-hidden rounded-lg shadow-lg">
-                            <a href="#">
-                                <img alt="Placeholder" class="block h-auto w-72"
-                                    src="{{ asset('image/pw-karimun.jpeg') }}">
-                            </a>
-
-                        </article>
-                        <!-- END Article -->
-                    </div>
-                    <!-- END Column -->
-                    <!-- Column -->
-                    <div class="my-1 px-1 w-72 md:w-72 lg:my-4 lg:px-4 lg:w-72">
-                        <!-- Article -->
-                        <article class="overflow-hidden rounded-lg shadow-lg">
-                            <a href="#">
-                                <img alt="Placeholder" class="block h-auto w-72"
-                                    src="{{ asset('image/pw-pangandaran.jpeg') }}">
-                            </a>
-
-                        </article>
-                        <!-- END Article -->
-                    </div>
-                    <!-- END Column -->
-
                 </div>
             </div>
         </section>
@@ -99,79 +69,49 @@
             <p class="text-center text-gray-400 text-sm">Berikut destinasi yang hampir banyak dikunjungi wisatawan</p>
         </div>
         <section class="container mx-auto">
-            <div class="container  mx-auto px-4 md:px-12 ">
-                <div class="sm:flex justify-center grid place-items-center flex-wrap mb-5 -mx-1 lg:-mx-4">
+            <div class="container mx-auto px-4 md:px-12">
+                <div class="-mx-1 mb-5 grid flex-wrap place-items-center justify-center gap-5 sm:flex lg:-mx-4">
                     <!-- Column -->
-                    <div class="my-1 px-1 w-72 md:w-72 lg:my-4 lg:px-4 lg:w-72">
-                        <!-- Article -->
-                        <article class="overflow-hidden rounded-lg">
-                            <a href="#">
-                                <img alt="Placeholder" class="block h-auto w-72"
-                                    src="{{ asset('image/paket-info/paket-tb.jpeg') }}">
-                            </a>
-                        </article>
-                        <!-- END Article -->
-                    </div>
-                    <!-- END Column -->
-                    <!-- Column -->
-                    <div class="my-1 px-1 w-72 md:w-72 lg:my-4 lg:px-4 lg:w-72">
-                        <!-- Article -->
-                        <article class="overflow-hidden rounded-lg shadow-lg">
-                            <a href="#">
-                                <img alt="Placeholder" class="block h-auto w-72"
-                                    src="{{ asset('image/paket-info/paket-tlb.jpeg') }}">
-                            </a>
-                        </article>
-                        <!-- END Article -->
-                    </div>
-                    <!-- END Column -->
-                    <!-- Column -->
-                    <div class="my-1 px-1 w-72 md:w-72 lg:my-4 lg:px-4 lg:w-72">
-                        <!-- Article -->
-                        <article class="overflow-hidden rounded-lg shadow-lg">
-                            <a href="#">
-                                <img alt="Placeholder" class="block h-auto w-72"
-                                    src="{{ asset('image/paket-info/paket-fo.jpeg') }}">
-                            </a>
 
-                        </article>
-                        <!-- END Article -->
-                    </div>
-                    <!-- END Column -->
-                    <!-- Column -->
-                    <div class="my-1 px-1 w-72 md:w-72 lg:my-4 lg:px-4 lg:w-72">
-                        <!-- Article -->
-                        <article class="overflow-hidden rounded-lg shadow-lg">
-                            <a href="#">
-                                <img alt="Placeholder" class="block h-auto w-72"
-                                    src="{{ asset('image/paket-info/paket-tbs-1.jpeg') }}">
-                            </a>
-                        </article>
-                        <!-- END Article -->
-                    </div>
-                    <!-- END Column -->
-                    <!-- Column -->
-                    <div class="my-1 px-1 w-72 md:w-72 lg:my-4 lg:px-4 lg:w-72">
-                        <!-- Article -->
-                        <article class="overflow-hidden rounded-lg shadow-lg">
-                            <a href="#">
-                                <img alt="Placeholder" class="block h-auto w-72"
-                                    src="{{ asset('image/paket-info/paket-rp-1.jpeg') }}">
-                            </a>
-                        </article>
-                        <!-- END Article -->
-                    </div>
-                    <!-- END Column -->
-                    <!-- Column -->
-                    <div class="my-1 px-1 w-72 md:w-72 lg:my-4 lg:px-4 lg:w-72">
-                        <!-- Article -->
-                        <article class="overflow-hidden rounded-lg shadow-lg">
-                            <a href="#">
-                                <img alt="Placeholder" class="block h-auto w-72"
-                                    src="{{ asset('image/paket-info/paket-rp-2.jpeg') }}">
-                            </a>
-                        </article>
-                        <!-- END Article -->
+                    {{-- Loop disini --}}
+                    <div class="my-1 w-72 px-1 md:w-72 lg:my-4 lg:w-72 lg:px-4">
+                        <div class="relative left-0 top-0 w-72 overflow-hidden rounded-2xl">
+                            <a href="/asds"> <img
+                                    src="https://elshinta.com/asset/upload/article/2023/september/8628_ELSHINTADOTCOM_20230925_gesat-2.jpg"
+                                    alt="Bandung" class="h-[350px] rounded-xl object-cover transition-all" /></a>
+
+                            <div class="absolute left-0 top-0 h-full w-full p-5 bg-gradient-to-t from-slate-700">
+                                <div class="flex h-full flex-col justify-between text-slate-50">
+                                    <div>
+                                        <h2 class="font-bold">Start From:</h2>
+                                        <p>Rp.2.500.000</p>
+                                    </div>
+                                    <ul class="list-disc px-3 font-bold">
+                                        <li>Keliling bandung</li>
+                                        <li>Bandros</li>
+                                        <li>Dago</li>
+                                        <li>Tahura</li>
+                                        <li>DLL</li>
+                                    </ul>
+                                    <div class="flex flex-col gap-3">
+                                        <h1 class="text-2xl">Paket 1 Hari (1D Tour)</h1>
+                                        <a href="https://wa.link/4ti0bp"
+                                            class="bg-[#d5633c] transform-translate-button flex w-full items-center justify-between rounded-md text-white text-sm ">
+                                            Booking sekarang
+                                            <span class="transform-translate-button-icon"><svg class="w-4 h-4"
+                                                    xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                    viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                    class="h-6 w-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                                </svg>
+                                            </span>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <!-- END Column -->
                 </div>
