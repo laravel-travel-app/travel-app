@@ -1,7 +1,8 @@
 const burger = document.querySelector(".burger");
 const navs = document.getElementById("navs");
+const tabsElement = document.getElementById("tabs-example");
 const busDropdownButton = document.getElementById("bus-dropdown-button");
-const toggleAccordion1 = document.querySelector(".lease-term-header");
+
 const contact = document.getElementById("contact");
 burger.addEventListener("click", function (e) {
     navs.classList.toggle("open");
@@ -22,35 +23,59 @@ function toggleDropdown(shouldOpen) {
         dropdown.classList.remove("open");
     }
 }
-toggleAccordion1.addEventListener("click", () => {
-    function toggleItem(element) {
-        const headers = document.querySelectorAll(".lease-term-header");
-        console.log(headers);
-        for (let header of headers) {
-            header.classList.remove("active");
-            header.nextElementSibling.style.height = "0px";
-        }
 
-        element.classList.add("active");
+// const tabElements = [
+//     {
+//         id: "profile",
+//         triggerEl: document.querySelector("#profile-tab-example"),
+//         targetEl: document.querySelector("#profile-example"),
+//     },
+//     {
+//         id: "dashboard",
+//         triggerEl: document.querySelector("#dashboard-tab-example"),
+//         targetEl: document.querySelector("#dashboard-example"),
+//     },
+//     {
+//         id: "settings",
+//         triggerEl: document.querySelector("#settings-tab-example"),
+//         targetEl: document.querySelector("#settings-example"),
+//     },
+//     {
+//         id: "contacts",
+//         triggerEl: document.querySelector("#contacts-tab-example"),
+//         targetEl: document.querySelector("#contacts-example"),
+//     },
+// ];
 
-        const content = element.nextElementSibling;
-        const text = content.querySelector(".lease-term-ul");
+// // options with default values
+// const options = {
+//     defaultTabId: "settings",
+//     activeClasses:
+//         "text-blue-600 hover:text-blue-600 dark:text-blue-500 dark:hover:text-blue-400 border-blue-600 dark:border-blue-500",
+//     inactiveClasses:
+//         "text-gray-500 hover:text-gray-600 dark:text-gray-400 border-gray-100 hover:border-gray-300 dark:border-gray-700 dark:hover:text-gray-300",
+//     onShow: () => {
+//         console.log("tab is shown");
+//     },
+// };
+// const instanceOptions = {
+//     id: "tabs-example",
+//     override: true,
+// };
+// const tabs = new Tabs(tabsElement, tabElements, options, instanceOptions);
+// // shows another tab element
+// tabs.show("dashboard");
 
-        content.style.height = `${text.clientHeight}px`;
-    }
+// // get the tab object based on ID
+// tabs.getTab("contacts");
+
+// // get the current active tab object
+// tabs.getActiveTab();
+
+const buttonTabs = document.querySelectorAll('[aria-selected="false"]');
+const tabPanels = document.querySelectorAll('[role="tabpanel"]');
+// console.log(buttonTabs);
+
+buttonTabs.forEach((buttonTab) => {
+    console.log(buttonTab);
 });
-function toggleItem(element) {
-    const headers = document.querySelectorAll(".lease-term-header");
-    console.log(headers);
-    for (let header of headers) {
-        header.classList.remove("active");
-        header.nextElementSibling.style.height = "0px";
-    }
-
-    element.classList.add("active");
-
-    const content = element.nextElementSibling;
-    const text = content.querySelector(".lease-term-ul");
-
-    content.style.height = `${text.clientHeight}px`;
-}

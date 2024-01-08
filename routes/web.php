@@ -12,6 +12,7 @@ use App\Http\Controllers\Car\CarController;
 use App\Http\Controllers\DestinationController;
 use App\Http\Controllers\PaketController;
 use App\Http\Controllers\Tour\DetailController;
+use App\Http\Controllers\Tour\TourController;
 
 //Route Home
 Route::get("/", [HomeController::class, 'index'])->name("home.index");
@@ -22,9 +23,9 @@ Route::get("/sewa-mobil", [CarController::class, 'index'])->name("car.index");
 
 //Route contact
 Route::get("/kontak", [ContactController::class, 'index'])->name("contact.index");
-
-//Route detail
-Route::get("/paket-wisata-bandung", [DetailController::class, 'index'])->name("tour.bandung.detail");
+//Route wisata
+Route::get("/paket-wisata-bandung", [TourController::class, 'index'])->name("tour.bandung");
+Route::get("/paket-wisata-bandung/1-hari", [TourController::class, 'detail'])->name("tour.bandung.detail");
 //Route Bus
 Route::get("/sewa-bus-pariwisata", [BusController::class, 'index'])->name("bus.index");
 Route::get("/sewa-bus-pariwisata/harga-sewa-bus", [BusController::class, 'price_bus'])->name("bus.price");
