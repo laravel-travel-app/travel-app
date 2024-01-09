@@ -1,4 +1,4 @@
-<x-app-layout title="Kontak Kami | M-One Travella">
+<x-app-layout title="Paket Wisata Bandung | M-One Travella">
     <section class="min-h-screen">
         <section class="h-1/2 flex justify-center flex-col bg-white">
             <div class="py-36 flex items-center justify-center  bg-clr-primary-500">
@@ -18,6 +18,18 @@
             </div>
             <section class="container mx-auto">
                 <div class="container mx-auto px-4 md:px-12">
+                    <div class="mb-10 mt-10">
+                        <h1 class="text-2xl font-semibold text-clr-smooth-black text-center">Pilihan Paket
+                            Liburan
+                            ke
+                            Bandung
+                            Bersama Emone Travella</h1>
+                        <p class="text-sm text-slate-400 text-center">Jangan tunggu terlalu lama, segera tentukan paket
+                            tour
+                            yang telah
+                            kami rangkum dan sesuaikan
+                            dengan jadwal liburan Anda.</p>
+                    </div>
                     <div class="-mx-1 mb-5 grid flex-wrap place-items-center justify-center gap-5 sm:flex lg:-mx-4">
                         <!-- Column -->
                         <div class="my-1 w-72 px-1 md:w-72 lg:my-4 lg:w-72 lg:px-4">
@@ -41,7 +53,7 @@
                                         </ul>
                                         <div class="flex flex-col gap-3">
                                             <h1 class="text-2xl">Paket 1 Hari (1D Tour)</h1>
-                                            <a href="https://wa.link/4ti0bp"
+                                            <a href="{{ route('tour.bandung.detail') }}"
                                                 class="bg-[#d5633c] transform-translate-button flex w-full items-center justify-between rounded-md text-white text-sm ">
                                                 Booking sekarang
                                                 <span class="transform-translate-button-icon"><svg class="w-4 h-4"
@@ -63,7 +75,6 @@
                     </div>
                 </div>
             </section>
-
         </section>
     </section>
 </x-app-layout>

@@ -18,7 +18,7 @@
             </p>
             <div class="flex items-center">
                 <a href="#paket-wisata"
-                    class="text-sm bg-clr-secondary-500 text-clr-smooth-white rounded-full transform-translate-button">
+                    class="text-sm custom-shadow-secondary bg-clr-secondary-500 text-clr-smooth-white rounded-full transform-translate-button">
                     <span>Jelajahi Sekarang!</span>
                     <span class="transform-translate-button-icon">></span>
                 </a>
@@ -43,7 +43,7 @@
                             <div
                                 class="absolute bottom-0 left-0 py-5 px-5 bg-gradient-to-t from-slate-700 to-transparent w-full">
                                 <h2 class="text-xl text-white font-bold mb-2">Paket wisata Bandung</h2>
-                                <a href="{{ route('tour.bandung.detail') }}"
+                                <a href="{{ route('tour.bandung') }}"
                                     class="bg-[#d5633c] transform-translate-button flex w-32 items-center justify-between rounded-md text-white text-sm py-2 px-3">
                                     Lihat paket
                                     <span class="transform-translate-button-icon"><svg class="w-4 h-4"
