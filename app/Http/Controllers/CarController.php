@@ -7,10 +7,15 @@ use App\Models\Car;
 
 class CarController extends Controller
 {
+    public function forUser()
+    {
+        $cars = Car::all();
+        return view('pages.cars.car', compact('cars'));
+    }
     public function index()
     {
-        $car = Car::all();
-        return view('admin.rentalmobil.data-mobil', compact('car'));
+        $cars = Car::all();
+        return view('admin.rentalmobil.data-mobil', compact('cars'));
     }
 
     public function create()
@@ -49,7 +54,6 @@ class CarController extends Controller
 
         $car->save();
         return redirect('admin/data-mobil')->with('message', 'Data Berhasil Disimpan');
-
     }
 
     public function edit($id)
@@ -72,7 +76,7 @@ class CarController extends Controller
 
         $car = Car::find($id);
         if ($request->hasFile('image')) {
-            $galeri->deleteImage();
+            // $galeri->deleteImage();
             $image = $request->file('image');
             $name = rand(1000, 9999) . $image->getClientOriginalName();
             $image->move('img/', $name);
@@ -94,9 +98,7 @@ class CarController extends Controller
 
     public function delete($id)
     {
-        $car = Car::find($id);
-        $car->delete();
-
-        return redirect('admin/data-mobil')-with('message', 'Data Berhasil Dihapus');
+        Car::find($id)->delete();
+        return redirect('admin/data-mobil')->with('message', 'Data Berhasil Dihapus');
     }
 }

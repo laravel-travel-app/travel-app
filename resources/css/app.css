@@ -256,3 +256,8 @@ input:focus-visible + label {
 .tabset {
     width: 80em;
 }
+
+.hover_card:hover {
+    box-shadow: 0 24px 72px 0 rgba(69, 133, 198, 0.2);
+    transition: all 0.5s;
+}

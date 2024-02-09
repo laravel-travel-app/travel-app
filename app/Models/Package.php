@@ -15,4 +15,8 @@ class Package extends Model
     {
         return $this->belongsTo(Destination::class);
     }
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

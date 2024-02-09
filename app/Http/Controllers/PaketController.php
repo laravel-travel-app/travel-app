@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Package;
 use App\Models\Destination;
+use Illuminate\Support\Facades\DB;
 
 class PaketController extends Controller
 {
@@ -34,15 +35,21 @@ class PaketController extends Controller
             $name = rand(1000, 9999) . $image->getClientOriginalName();
             $image->move('img/', $name);
         }
-
+        $destination = Destination::get('slug')->first();
         $package = new Package;
         $package->image = $name;
         $package->package_name = $request->package_name;
         $package->price = $request->price;
         $package->desc = $request->desc;
+        $package->slug = \Str::slug($destination->slug);
         $package->destination_id = $request->destination_id;
 
         $package->save();
         return redirect('admin/data-paket')->with('message', 'Data Berhasil Disimpan');
+    }
+    public function destroy($id)
+    {
+        DB::table('packages')->delete($id);
+        return redirect()->back();
     }
 }

@@ -35,7 +35,6 @@ class DestinationController extends Controller
         $destination->image = $name;
         $destination->name = $request->name;
         $destination->slug = \Str::slug($request->name);
-
         $destination->save();
         return redirect('admin/data-destinasi')->with('message', 'Data Berhasil Disimpan');
     }

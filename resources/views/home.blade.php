@@ -36,27 +36,35 @@
                 <div class="sm:flex justify-center gap-5 grid place-items-center flex-wrap mb-5 -mx-1 lg:-mx-4">
                     {{-- Looping disini --}}
                     <!-- Column -->
-                    <div class="my-1 px-1 w-72 md:w-72 lg:my-4 lg:px-4 lg:w-72">
-                        <div class="relative left-0 top-0 w-72 rounded-2xl overflow-hidden">
-                            <img src="https://elshinta.com/asset/upload/article/2023/september/8628_ELSHINTADOTCOM_20230925_gesat-2.jpg"
-                                alt="Bandung" class="h-[350px] rounded-xl object-cover" />
-                            <div
-                                class="absolute bottom-0 left-0 py-5 px-5 bg-gradient-to-t from-slate-700 to-transparent w-full">
-                                <h2 class="text-xl text-white font-bold mb-2">Paket wisata Bandung</h2>
-                                <a href="{{ route('tour.bandung') }}"
-                                    class="bg-[#d5633c] transform-translate-button flex w-32 items-center justify-between rounded-md text-white text-sm py-2 px-3">
-                                    Lihat paket
-                                    <span class="transform-translate-button-icon"><svg class="w-4 h-4"
-                                            xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                                            stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
-                                            <path stroke-linecap="round" stroke-linejoin="round"
-                                                d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-                                        </svg>
-                                    </span>
-                                </a>
+                    @forelse ($destinations as $destination)
+                        <div class="my-1 px-1 hover_card w-72 md:w-72 lg:my-4 lg:px-4 lg:w-72">
+                            <div class="relative left-0 top-0 w-72 rounded-2xl overflow-hidden ">
+                                <img src="{{ asset('img/' . $destination->image) }}" alt="Bandung"
+                                    class="h-[350px] rounded-xl object-cover " />
+                                <div
+                                    class="absolute bottom-0 left-0 py-5 px-5 bg-gradient-to-t from-slate-900 to-transparent w-full">
+                                    <h2 class="text-base text-white font-bold mb-2">{{ $destination->name }}</h2>
+                                    <a href="/list/{{ $destination->slug }}"
+                                        class="bg-[#d5633c] transform-translate-button flex w-32 items-center justify-between rounded-md text-white text-sm py-2 px-3">
+                                        Lihat paket
+                                        <span class="transform-translate-button-icon"><svg class="w-4 h-4"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                                                <path stroke-linecap="round" stroke-linejoin="round"
+                                                    d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                                            </svg>
+                                        </span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    @empty
+                        <div
+                            class="p-5 bg-green-100 w-full md:w-1/2 text-green-800 text-center border-4 font-semibold rounded-md border-green-300">
+                            Tidak ada
+                            data</div>
+                    @endforelse
+
                     <!-- END Column -->
                 </div>
             </div>
