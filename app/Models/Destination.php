@@ -10,7 +10,7 @@ class Destination extends Model
     use HasFactory;
 
     protected $table = 'destinations';
-
+    protected $guarded = [];
     public function packages()
     {
         return $this->hasMany(Package::class);

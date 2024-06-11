@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('package_name');
             $table->integer('price');
             $table->text('desc');
+            $table->string('slug');
             $table->foreignId('destination_id')->constrained('destinations');
             $table->timestamps();
         });

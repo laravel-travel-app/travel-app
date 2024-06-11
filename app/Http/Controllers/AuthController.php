@@ -4,30 +4,37 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use Auth;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Validation\ValidationException;
 
 class AuthController extends Controller
 {
-    public function login() 
+    public function login()
     {
         return view('login');
     }
 
     public function post_login(Request $request)
     {
-        $credentials = $request->validate([
+        $request->validate([
             'email' => ['required', 'email'],
             'password' => ['required'],
         ]);
 
-        if (Auth::attempt($credentials)) {
-            $request->session()->regenerate();
-
-            return redirect()->intended('admin/dashboard');
+        $user = User::where('email', $request->email)->first();
+        if (!Hash::check($request->password, $user?->password)) {
+            throw ValidationException::withMessages([
+                'email' => 'These credentials do not match our records.'
+            ]);
         }
 
-        return back()->withErrors([
-            'email' => 'The provided credentials do not match our records.',
-        ])->onlyInput('email');
+        Auth::login($user, $request->remember);
+
+        // if (Auth::attempt($credentials)) {
+        //     $request->session()->regenerate();
+
+        return redirect()->intended('admin/dashboard');
+        // }
     }
 }
