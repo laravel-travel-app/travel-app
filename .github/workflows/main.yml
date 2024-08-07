@@ -18,10 +18,9 @@ on:
         description: 'Purpose of Run This Workflow?'
         required: true
         type: string
-
-  jobs: 
-    print-tag:
-      runs-on: windows-latest
-      steps: 
-        -name: Print the purpose of run
-         run: echo ${{ inputs.tags }} purpose
+jobs:
+  print-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print the purpose of run
+        run: echo  ${{ inputs.tags }} purpose
