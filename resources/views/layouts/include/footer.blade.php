@@ -1,7 +1,11 @@
-<footer class="main-footer">
-    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
+<footer class="main-footer text-sm">
     <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.2.0
+        <strong>v1.0</strong>
     </div>
-  </footer>
+
+    <strong>
+        &copy; {{ date('Y') }}
+        <span class="text-primary">M-One Travella</span>.
+    </strong>
+    All rights reserved.
+</footer>

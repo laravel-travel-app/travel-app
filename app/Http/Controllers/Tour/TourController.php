@@ -14,7 +14,9 @@ class TourController extends Controller
     public function list($slug)
     {
 
-        $packages = Package::all();
+        $destination = Destination::where('slug', $slug)->firstOrFail();
+
+        $packages = $destination->packages;
 
         return view("pages.tour.list-package-tour", ['packages' => $packages]);
     }
