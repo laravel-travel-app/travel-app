@@ -15,12 +15,15 @@ return new class extends Migration
     {
         Schema::create('packages', function (Blueprint $table) {
             $table->id();
-            $table->binary('image');
+            $table->string('image')->nullable();
             $table->string('package_name');
-            $table->integer('price');
-            $table->text('desc');
-            $table->string('slug');
-            $table->foreignId('destination_id')->constrained('destinations');
+            $table->string('slug')->unique();
+            $table->foreignId('destination_id')
+                ->constrained()
+                ->cascadeOnDelete();
+            $table->bigInteger('price');
+            $table->text('description');
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }

@@ -15,15 +15,16 @@ return new class extends Migration
     {
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
-            $table->binary('image');
+            $table->string('image')->nullable();
             $table->string('name');
-            $table->integer('price');
-            $table->string('transmission');
-            $table->string('fuel');
-            $table->string('color');
-            $table->string('capacity');
+            $table->bigInteger('price');
+            $table->enum('transmission', ['manual', 'automatic']);
+            $table->enum('fuel', ['bensin', 'diesel', 'listrik'])->nullable();
+            $table->string('color')->nullable();
+            $table->unsignedInteger('capacity');
             $table->boolean('driver')->default(false);
             $table->boolean('bbm')->default(false);
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
         });
     }
